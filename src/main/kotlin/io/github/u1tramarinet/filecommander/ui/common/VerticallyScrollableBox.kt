@@ -1,4 +1,4 @@
-package ui.view
+package io.github.u1tramarinet.filecommander.ui.common
 
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*

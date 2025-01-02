@@ -1,10 +1,10 @@
-package io.github.u1tramarinet
+package io.github.u1tramarinet.filecommander
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import io.github.u1tramarinet.ui.WindowState
+import io.github.u1tramarinet.filecommander.ui.WindowState
 
 class ApplicationState(startWindow: WindowState) {
     val windowStack = mutableStateListOf<WindowState>()

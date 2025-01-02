@@ -1,9 +1,9 @@
-package io.github.u1tramarinet.ui.browse
+package io.github.u1tramarinet.filecommander.ui.browse
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.window.ApplicationScope
-import io.github.u1tramarinet.ui.common.FilesView
-import io.github.u1tramarinet.ui.common.WindowScaffold
+import io.github.u1tramarinet.filecommander.ui.common.FilesView
+import io.github.u1tramarinet.filecommander.ui.common.WindowScaffold
 
 @Composable
 fun ApplicationScope.BrowseWindow(

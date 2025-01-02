@@ -1,4 +1,4 @@
-package io.github.u1tramarinet
+package io.github.u1tramarinet.filecommander
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.layout.*

@@ -1,4 +1,4 @@
-package io.github.u1tramarinet.ui.main
+package io.github.u1tramarinet.filecommander.ui.main
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth

@@ -1,4 +1,4 @@
-package io.github.u1tramarinet.domain
+package io.github.u1tramarinet.filecommander.domain
 
 import java.io.File
 
@@ -40,7 +40,7 @@ sealed interface MyFiles {
         override val path: String
             get() = file.path
         override val name: String
-            get() = File(path).name
+            get() = file.name.ifEmpty { file.path }
         override val parent: MyDirectory?
             get() = getParent(path)
         val children: List<MyFiles>
@@ -64,7 +64,7 @@ sealed interface MyFiles {
     }
 
     companion object {
-        private const val ROOT_DIR = "/"
+        private val ROOT_DIR = File.separator
 
         fun create(pathName: String): MyFiles? {
             val file = File(pathName)
@@ -103,7 +103,7 @@ sealed interface MyFiles {
         private fun getChildren(directory: MyDirectory): List<MyFiles> {
             return if (directory.path == ROOT_DIR) {
                 File.listRoots().mapNotNull { root ->
-                    MyDirectory.create(root.path)
+                    create(root.path)
                 }
             } else {
                 File(directory.path).listFiles()?.mapNotNull { file ->

@@ -1,8 +1,8 @@
-package io.github.u1tramarinet.ui.main
+package io.github.u1tramarinet.filecommander.ui.main
 
 import androidx.compose.runtime.*
 import androidx.compose.ui.window.ApplicationScope
-import io.github.u1tramarinet.ui.common.WindowScaffold
+import io.github.u1tramarinet.filecommander.ui.common.WindowScaffold
 
 @Composable
 fun ApplicationScope.MainWindow(

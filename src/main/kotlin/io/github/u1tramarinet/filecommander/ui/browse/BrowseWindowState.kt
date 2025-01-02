@@ -1,5 +1,5 @@
-package io.github.u1tramarinet.ui.browse
+package io.github.u1tramarinet.filecommander.ui.browse
 
-import io.github.u1tramarinet.ui.WindowState
+import io.github.u1tramarinet.filecommander.ui.WindowState
 
 class BrowseWindowState : WindowState()

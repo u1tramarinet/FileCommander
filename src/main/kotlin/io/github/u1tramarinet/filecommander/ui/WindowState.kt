@@ -1,4 +1,4 @@
-package io.github.u1tramarinet.ui
+package io.github.u1tramarinet.filecommander.ui
 
 open class WindowState {
 }
