@@ -7,6 +7,8 @@ import io.github.u1tramarinet.filecommander.ui.main.MainWindow
 import io.github.u1tramarinet.filecommander.ui.WindowState
 import io.github.u1tramarinet.filecommander.ui.browse.BrowseWindow
 import io.github.u1tramarinet.filecommander.ui.browse.BrowseWindowState
+import io.github.u1tramarinet.filecommander.ui.compare.CompareWindow
+import io.github.u1tramarinet.filecommander.ui.compare.CompareWindowState
 
 fun main() = application {
     val state = remember { ApplicationState(WindowState()) }
@@ -17,11 +19,18 @@ fun main() = application {
                     BrowseWindow(onCloseRequest = state::closeWindow)
                 }
 
+                is CompareWindowState -> {
+                    CompareWindow(onCloseRequest = state::closeWindow)
+                }
+
                 else -> {
                     MainWindow(
                         onCloseRequest = state::closeWindow,
                         onClickBrowse = {
                             state.openWindow(BrowseWindowState())
+                        },
+                        onClickCompare = {
+                            state.openWindow(CompareWindowState())
                         }
                     )
                 }

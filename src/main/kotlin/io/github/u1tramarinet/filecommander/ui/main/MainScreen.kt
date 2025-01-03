@@ -14,10 +14,14 @@ import androidx.compose.ui.window.FrameWindowScope
 fun FrameWindowScope.MainScreen(
     modifier: Modifier = Modifier,
     onClickBrowse: () -> Unit,
+    onClickCompare: () -> Unit,
 ) {
     Column(modifier = modifier.padding(16.dp)) {
         Button(modifier = Modifier.fillMaxWidth(), onClick = onClickBrowse) {
             Text("Browse Files")
+        }
+        Button(modifier = Modifier.fillMaxWidth(), onClick = onClickCompare) {
+            Text("Compare Files")
         }
     }
 }

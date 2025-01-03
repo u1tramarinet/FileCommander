@@ -8,6 +8,7 @@ import io.github.u1tramarinet.filecommander.ui.common.WindowScaffold
 fun ApplicationScope.MainWindow(
     onCloseRequest: () -> Unit,
     onClickBrowse: () -> Unit,
+    onClickCompare: () -> Unit,
 ) {
     WindowScaffold(
         title = "FileCommander",
@@ -19,6 +20,6 @@ fun ApplicationScope.MainWindow(
             }
         }
     ) {
-        MainScreen(onClickBrowse = onClickBrowse)
+        MainScreen(onClickBrowse = onClickBrowse, onClickCompare = onClickCompare)
     }
 }
